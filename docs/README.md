@@ -26,13 +26,14 @@ title:
 #### Table of content
 
 1. [Abstract](#abstract)
-2. [Related works](#related-works)
-3. [Methodology](#methodology)
-4. [Experiment Setup and Implementation](#experiment-setup-and-implementation)
-5. [Results and Analysis](#results-and-analysis)
-6. [Conclusion](#conclusion)
-7. [Publications](#publications)
-8. [Links](#links)
+2. [Introduction](#introduction)
+3. [Related works](#related-works)
+4. [Methodology](#methodology)
+5. [Experiment Setup and Implementation](#experiment-setup-and-implementation)
+6. [Results and Analysis](#results-and-analysis)
+7. [Conclusion](#conclusion)
+8. [Publications](#publications)
+9. [Links](#links)
 
 ---
 
@@ -51,7 +52,41 @@ Imperfection patterns encompass various anomalies within event logs, such as dup
 
 Our project aims to develop an innovative algorithm and accompanying plugin for a Process Data Quality (PDQ) framework, designed to detect and rectify imperfection patterns in event logs. By leveraging advanced data mining techniques and process expertise, our solution seeks to enhance the quality and reliability of process data, empowering organizations to make informed decisions and drive continuous improvement initiatives.
 
+## Introduction
+
+### What is Process Mining?
+
+Process mining is a cutting-edge discipline that extracts insights from the digital footprints left by organizational processes. By analyzing event logs and transactional data captured within information systems, process mining techniques unveil the inner workings of business processes, revealing their execution paths, variations, and performance metrics.
+
+Through process discovery, conformance checking, and performance analysis, process mining enables organizations to gain a deep understanding of their operations, identify inefficiencies, and optimize workflows for enhanced productivity and efficiency. By bridging the gap between data analytics and process management, process mining empowers organizations to make data-driven decisions, streamline operations, and drive continuous improvement initiatives.
+
+### Event logs and Data quality issues
+
+Event logs are fundamental to process mining, capturing sequences of events representing process executions. Each event is associated with a case identifier, activity label, and timestamp for event ordering. Event logs may require additional attributes like resource information. They are compiled from raw source logs and formalized as a set of events, allowing relational algebraic operations.
+
+To assess event log quality, a suitable quality model is crucial. Data quality dimensions include accuracy, completeness, consistency, currency, timeliness, volatility, and synchronization. Understanding and evaluating these dimensions enable the identification and resolution of data quality issues, ensuring reliable and trustworthy data for decision-making.
+
+Patterns, popularized by Christopher Alexander, capture common problems and their solutions, applicable across various domains. Initially utilized in architecture and later in object-oriented programming, patterns offer practical solutions derived from experience. The "Rule of Three" dictates that a solution becomes a pattern after successful application in multiple contexts, emphasizing their practicality and adaptability.
+
 ## Related works
+
+Existing research on data quality in process mining emphasizes the significance of quality event logs and proposes methods to address common issues like noise removal. The Process Mining Manifesto underscores the importance of high-quality event logs for analysis. Bose et al. categorize event log quality issues into missing, incorrect, imprecise, and irrelevant data categories. Mans et al. introduce a process mining data spectrum to categorize event data within a Hospital Information System (HIS), highlighting challenges arising from varying data granularity and accuracy. Noise in event logs can lead to complex and misleading models. Various studies propose frequency analysis to detect noise and identify unusual patterns. Event log imperfection patterns extracted from diverse fields offer insights into recurring issues, detection strategies, affected data quality dimensions, consequences on analysis outcomes, and remedial actions. These patterns enhance the reliability and usability of event logs for process mining analysis.
+
+### Identified Imperfection Patterns
+
+1. Form-based Event Capture 
+2. Inadvertent Time Travel
+3. Unanchored Event
+4. Scattered Event
+5. Elusive Case
+6. Scattered Case
+7. Collateral Events
+8. Polluted Label
+9. Distorted Label
+10. Synonymous Labels 
+11. Homonymous Label
+
+Goal of this project is to develop and algorithm to detect and repair one or more of these imperfection patterns.
 
 ## Methodology
 
