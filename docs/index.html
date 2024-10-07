@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Extending and Implementing Process Mining Techniques - Detection and Repair Solutions using process mining, machine learning, and AI.">
+    <title>Extending and Implementing Process Mining Techniques</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            flex: 4; /* Right div takes up 2 parts */
+            background-color: #e9ecef; /* Background color */
+            padding: 20px; /* Padding inside the div */
+        }
+
+        .sidebar{
+            flex: 1; /* Left div takes up 1 part */
+            background-color: #f4f4f4; /* Background color */
+            padding: 20px; /* Padding inside the div */
+            overflow: hidden;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="sidebar" style="background-color: #d4edda; padding: 20px;">
+        <h3>Browse</h3>
+        <ul>
+            <li><a href="#description">Objectives</a></li>
+            <li><a href="#patterns">Implemented Algorithms</a></li>
+            <li><a href="#patterns">Implemented Algorithms</a></li>
+            <li><a href="#unanchored-event">Unanchored Event Detection</a></li>
+            <li><a href="#form-based-pattern">Form-Based Pattern Detection</a></li>
+            <li><a href="#inadvertent-time-travel">Inadvertent Time Travel</a></li>
+        </ul>
+        
+        <section id="project-info" >
+            <h2>Project Information</h2>
+            <p><strong>Supervisors:</strong></p>
+            <ul>
+                <li>Dr. Asitha Bandaranyake</li>
+                <li>Dr. Chathura Ekanayake</li>
+                <li>Prof. Arthur ter Hofstede</li>
+            </ul>
+            <p><strong>Team Members:</strong></p>
+            <ul>
+                <li>Kavinda Karunarathna - email: <a href="mailto:e18170@eng.pdn.ac.lk">e18170@eng.pdn.ac.lk</a></li>
+                <li>Jayathu Rajasooriya - email: <a href="mailto:e18276@eng.pdn.ac.lk">e18276@eng.pdn.ac.lk</a></li>
+                <li>Sanjaya Gihan - email: <a href="mailto:e18412@eng.pdn.ac.lk">e18412@eng.pdn.ac.lk</a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Extending and Implementing Process Mining Techniques</h1>
+        </header>
+        <section id="description">
+            <h2>Objectives</h2>
+            <p>The project aims to improve the effectiveness of process mining by detecting and repairing imperfections
+                in event logs. Using a patterns-based approach, the project systematically addresses common data quality
+                issues such as timestamp errors, misordered events, and duplication. This enhancement ensures more
+                accurate process mining analyses and helps organizations in sectors like healthcare to monitor, analyze,
+                and improve their internal processes efficiently.</p>
+
+            <p>The focus is on creating algorithms and solutions to detect, classify, and repair data imperfections in
+                event logs, ultimately leading to higher quality data and more reliable process mining results. The
+                project utilizes a variety of techniques from process mining, data mining, machine learning,
+                gamification, artificial intelligence, and statistics to develop detection and repair solutions.</p>
+
+            <p>Specifically, the project involves the creation of new algorithms, with examples including the use of
+                Large Language Models (LLMs) to enhance detection and repair processes. These advanced techniques ensure
+                efficient and effective improvements in event log data quality, allowing for robust process mining
+                insights.</p>
+        </section>
+
+
+        <section id="patterns">
+            <h2>Implemented Algorithms</h2>
+            <ul>
+                <li><strong>Form-Based Pattern:</strong> Addresses issues caused by events logged as different parallel
+                    events, flattening event order and causing duplications.</li>
+                <li><strong>Inadvertent Time Travel:</strong> Corrects temporal misordering of events due to erroneous
+                    timestamps near midnight or adjacent key presses.</li>
+                <li><strong>Unanchored Event:</strong> Resolves issues in timestamp formats that differ from the tool's
+                    expectations, leading to misinterpretation of timestamps.</li>
+            </ul>
+        </section>
+
+        <section id="unanchored-event">
+            <h2>Unanchored Event Detection and Repair</h2>
+            <p>The Unanchored Event pattern arises when the timestamp format in the event log differs from the tool's
+                expected format, leading to incorrect event ordering. Common issues include confusion between day-month
+                and month-day formats, or inconsistent symbols and timezones.</p>
+
+            <h3>Algorithms for Timestamp Analysis and Repair</h3>
+            <p>The project developed a series of algorithms to analyze and repair timestamp values by detecting
+                deviations from the expected standard. The key steps are:</p>
+
+            <ol>
+                <li>
+                    <strong>Timestamp Format Identification:</strong>
+                    <ul>
+                        <li>Identify the expected timestamp format (e.g., YYYY-MM-DD HH:MM:SS).</li>
+                        <li>Develop a parser to recognize timestamps in the expected format.</li>
+                        <li>Validate parsed timestamps to ensure they adhere to the expected format.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Handling Format Variations:</strong>
+                    <ul>
+                        <li>Account for variations like month-day vs. day-month formats.</li>
+                        <li>Handle different symbols for time separation (e.g., colon ":" vs. dot ".").</li>
+                        <li>Manage variations in timezone encoding and offsets.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Anomaly Detection and Flagging:</strong>
+                    <ul>
+                        <li>Detect anomalies such as ambiguous date formats or misinterpreted timestamp values.</li>
+                        <li>Implement logic to flag potential errors in the timestamp.</li>
+                        <li>Ensure that all timestamp values fall within expected ranges to avoid time-traveling errors.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Once these algorithms identify and flag issues in the timestamps, they initiate a repair process that
+                corrects the timestamps, ensuring consistent event ordering.</p>
+        </section>
+
+
+        <section id="form-based-pattern">
+            <h2>Form-Based Pattern Detection and Repair</h2>
+            <p>The Form-Based Pattern occurs when multiple events are logged from a single form as separate parallel
+                events. This issue causes flattened event orders, unnecessary duplications, and results in overly
+                complex process models. The project implements two distinct approaches to detect and repair this issue:
+            </p>
+
+            <h3>Repairing Approaches</h3>
+            <h4>Repairing Approach 1: Manual Aggregation Method</h4>
+            <p>This approach involves manually detecting and aggregating events that have the same timestamps and case
+                IDs.</p>
+            <ul>
+                <li><strong>Detection:</strong> The system identifies events with the same timestamps and case IDs.</li>
+                <li><strong>User Interaction:</strong> The system prompts users to determine if the events should be
+                    aggregated into a single form-based event by providing a single event topic.</li>
+                <li><strong>Aggregation:</strong> Using the provided data, the system merges the detected form-based
+                    events into a single event.</li>
+            </ul>
+            <p><strong>Pros:</strong> Provides a manual, user-driven process for greater control over event aggregation.
+            </p>
+            <p><strong>Cons:</strong></p>
+            <ul>
+                <li>Slow and inefficient due to the manual nature of the process.</li>
+                <li>Not suitable for every organization.</li>
+                <li>Time-consuming, particularly for large event logs.</li>
+            </ul>
+
+            <h4>Repairing Approach 2: Machine Learning-Based Method</h4>
+            <p>This approach utilizes machine learning models to automatically detect and aggregate events based on
+                their timestamps and case IDs.</p>
+            <ul>
+                <li><strong>Detection:</strong> The system identifies events with the same timestamps and case IDs.</li>
+                <li><strong>Inference:</strong> An AI model is used to infer relationships between the detected events
+                    and determine whether they belong to a single form.</li>
+                <li><strong>Aggregation:</strong> The system aggregates detected events into a single event based on the
+                    AI model’s inferences and adds the new aggregated events in place of the original detected events.
+                </li>
+            </ul>
+            <p><strong>Pros:</strong></p>
+            <ul>
+                <li>Fast and efficient, saving time and resources.</li>
+                <li>Can be applied to any organization’s event logs, regardless of complexity or size.</li>
+            </ul>
+            <p><strong>Cons:</strong> Requires a well-trained AI model, which may require upfront setup and tuning
+                costs.</p>
+        </section>
+
+
+        <section id="inadvertent-time-travel">
+            <h2>Inadvertent Time Travel Detection and Repair</h2>
+            <p>Inadvertent Time Travel occurs when timestamps are recorded incorrectly, leading to misordering of events
+                in the process log. This pattern is typically caused by human errors, such as incorrect timestamps near
+                midnight or adjacent key presses. Two distinct experiments were conducted to detect and repair these
+                issues:</p>
+
+            <h3>Experiment 01: Rule-Based Approach</h3>
+            <p>This approach relies on manually defined rules that are applied during program execution to all event
+                logs.</p>
+            <ul>
+                <li><strong>Detection:</strong> The system checks if any event logs violate predefined rules.</li>
+                <li><strong>Repair:</strong> If violations are detected, the system reorders the events so they comply
+                    with the rules.</li>
+            </ul>
+            <h4>Rules Used:</h4>
+            <ul>
+                <li>Rules for re-ordering events based on temporal inconsistencies.</li>
+                <li>Rules to correct erroneous timestamps.</li>
+            </ul>
+            <p><strong>Pros:</strong> Simple and easy to implement for rule-specific scenarios.</p>
+            <p><strong>Cons:</strong> Limited in scope since it requires manual input of rules and is not fully
+                automated.</p>
+
+            <h3>Experiment 02: LLM-Based Approach</h3>
+            <p>This approach leverages a Large Language Model (LLM) to provide a more intelligent and automated solution
+                for detecting and repairing Inadvertent Time Travel patterns.</p>
+            <ul>
+                <li><strong>Detection:</strong> The system sends one event log at a time to the LLM and asks it to
+                    evaluate whether the event log is in the correct order.</li>
+                <li><strong>Repair:</strong> If the log is not in the correct order, the LLM will automatically return
+                    the events in the proper sequence.</li>
+            </ul>
+            <p><strong>Pros:</strong> Fully automated, can adapt to various cases without needing predefined rules,
+                making it more generalizable.</p>
+            <p><strong>Cons:</strong> The LLM-based approach is more costly due to the need for model fine-tuning and
+                runtime usage costs.</p>
+
+            <h3>Comparison of Experiments</h3>
+            <p>Both the rule-based and LLM-based approaches show similar results in terms of detection and repair
+                accuracy. However, there are significant differences:</p>
+            <ul>
+                <li><strong>Rule-Based Approach:</strong> Requires manual rule input, is less automated, but is
+                    cost-effective for smaller use cases.</li>
+                <li><strong>LLM-Based Approach:</strong> Fully automated and capable of handling more complex scenarios,
+                    but incurs higher costs for model training and usage.</li>
+            </ul>
+        </section>
+
+
+        <section id="comparison">
+            <The>Comparison of Detection and Repair Approaches: The rule-based approach and LLM-based approach showed
+                similar accuracy. However, the LLM-based approach is fully automated but more costly due to the need for
+                model fine-tuning.</p>
+        </section>
+    </div>
+
+    
+    
+
+
+</body>
+
+</html>
