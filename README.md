@@ -1,10 +1,10 @@
 ___
-# DETECTION AND REPAIR OF SELECTED IMPERFECTION PATTERNS IDENTIFIED IN PROCESS MINING EVENT LOGS
+# A Study on the Identification and Resolution of Selected Imperfection Patterns in Process Mining Event Logs
 ___
 
 ## 📌 Note
 
-This repository contains research work conducted by University of Peradeniya students as part of a collaboration with Queensland University of Technology (QUT) on the PraeclarusPDQ Process Data Quality framework.
+Note that this repository only contains research work conducted by University of Peradeniya students as part of a collaboration with Queensland University of Technology (QUT) on the PraeclarusPDQ Process Data Quality framework.
 
 The original PraeclarusPDQ framework is available at the official PraeclarusPDQ repository: https://github.com/praeclaruspdq/PraeclarusPDQ
 
@@ -15,6 +15,15 @@ This research project focuses on the detection and repair of selected data-quali
 The work was carried out as part of a collaboration between the University of Peradeniya and Queensland University of Technology (QUT), building upon the PraeclarusPDQ framework developed by the QUT research group.
 
 The project investigates different approaches for identifying and repairing selected imperfection patterns, including rule-based and machine-learning-based techniques.
+
+## Objectives
+
+The main objectives of the project are to:
+
+1.Investigate selected data-quality imperfections occurring in process-mining event logs.
+2.Develop approaches for detecting these imperfections.
+3.Develop suitable methods for repairing detected imperfections.
+4.Explore different approaches, including rule-based, machine-learning-based, and AI-based techniques.
 
 ## Relationship to PraeclaurusPDQ
 
